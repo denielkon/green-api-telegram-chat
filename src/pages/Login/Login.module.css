@@ -1,0 +1,141 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  background: #f4f4f5;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  padding: 32px 28px 24px;
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 2px 14px rgb(0 0 0 / 8%);
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0 0 26px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.field {
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.field span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.field input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  transition: border-color 0.15s;
+}
+
+.field input:focus {
+  border-color: var(--accent);
+}
+
+.field input::placeholder {
+  overflow: hidden;
+  color: #bfc2c7;
+  text-overflow: ellipsis;
+}
+
+.error {
+  margin: 4px 0 10px;
+  color: var(--danger);
+  font-size: 14px;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.submit {
+  margin-top: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--accent-dark);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.link {
+  margin-top: 16px;
+  color: var(--accent);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .page {
+    align-items: flex-start;
+    padding: 24px 14px calc(24px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .card {
+    padding: 26px 20px 20px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 14px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    margin-bottom: 20px;
+  }
+}
